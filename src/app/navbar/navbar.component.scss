@@ -1,0 +1,38 @@
+@import '../../../public/styles/_mixins.scss';
+@import '../../../public/styles/_media.scss';
+
+.nav {
+  display: flex;
+
+  &__list {
+    font-weight: 500;
+    margin-left: auto;
+    display: flex;
+    font-size: 20px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+    position: relative;
+
+    @include hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition-duration: inherit;
+    }
+  }
+}

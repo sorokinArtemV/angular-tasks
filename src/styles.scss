@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../public/styles/normalize',
+'../public/styles/fonts',
+'../public/styles/mixins',
+'../public/styles/variables',
+'../public/styles/media',
+'../public/styles/utils',
+'../public/styles/globals';
+
