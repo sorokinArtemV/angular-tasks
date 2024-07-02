@@ -1,0 +1,58 @@
+@import '../../../../public/styles/_mixins.scss';
+@import '../../../../public/styles/_media.scss';
+
+
+.section {
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 48px;
+
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__counter {
+    padding-inline: 10px;
+    font-size: 54px;
+    font-weight: 600;
+    color: var(--color-dark);
+    border-radius: var(--border-radius-small);
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 16px;
+  }
+}
+
+.button {
+  padding-inline: 36px;
+  height: 48px;
+  border-radius: var(--border-radius-small);
+  border: var(--border);
+  cursor: pointer;
+  text-transform: uppercase;
+
+  @include hover {
+    background-color: lightgrey;
+    color: var(--color-dark);
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+}
