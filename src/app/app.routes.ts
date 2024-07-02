@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { TasksComponent } from './tasks/tasks.component';
+import { Task3Component } from './tasks/task3/task3.component';
 
 export const routes: Routes = [
   {
@@ -17,11 +18,11 @@ export const routes: Routes = [
   //   component: Task2Component,
   //   title: 'Tasks App',
   // },
-  // {
-  //   path: 'tasks/3',
-  //   component: Task3Component,
-  //   title: 'Tasks App',
-  // },
+  {
+    path: 'tasks/3',
+    component: Task3Component,
+    title: 'Tasks App',
+  },
   // {
   //   path: 'tasks/4',
   //   component: Task4Component,

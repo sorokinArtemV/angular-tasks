@@ -1,0 +1,144 @@
+@charset "UTF-8";
+.section__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.card {
+  padding: 25px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  row-gap: 15px;
+}
+.card__image-wrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.card__image-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: lightblue;
+  top: 47%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.card__image-wrapper::after {
+  content: "“";
+  font-size: 72px;
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  background-color: lightblue;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.card__image {
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.card__personal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.buttons-container__direction-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.button {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.button--left, .button--right {
+  font-size: 24px;
+  color: lightblue;
+  background-color: transparent;
+  font-weight: 800;
+}
+@media (hover: hover) {
+  .button--left:hover, .button--right:hover {
+    color: #254caf;
+  }
+}
+@media (hover: none) {
+  .button--left:active, .button--right:active {
+    color: #254caf;
+  }
+}
+.button--surprise {
+  background-color: lightblue;
+  color: #254caf;
+  border: #254caf solid 1px;
+}
+@media (hover: hover) {
+  .button--surprise:hover {
+    background-color: #254caf;
+    color: white;
+    border: lightblue solid 1px;
+  }
+}
+@media (hover: none) {
+  .button--surprise:active {
+    background-color: #254caf;
+    color: white;
+    border: lightblue solid 1px;
+  }
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.personal-info__name {
+  padding-top: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.personal-info__job {
+  padding-top: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: lightblue;
+}
+.personal-info__description {
+  padding-top: 15px;
+}
+
+/*# sourceMappingURL=task3.component.css.map */

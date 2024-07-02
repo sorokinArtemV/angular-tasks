@@ -1,0 +1,26 @@
+<app-header/>
+<section class="section container">
+  <div class="section__inner">
+    <div class="card">
+      <div class="card__image-wrapper">
+        <img class="card__image"
+             [src]="currentPersonImagePath()"
+             [alt]="currentPerson?.name"
+             width="150px" height="150px" loading="lazy"
+        >
+      </div>
+      <div class="personal-info">
+        <h2 class="personal-info__name"> {{ currentPerson?.name }}</h2>
+        <p class="personal-info__job"> {{ currentPerson?.job }}</p>
+        <p class="personal-info__description"> {{ currentPerson?.description }} </p>
+      </div>
+      <div class="card__buttons-container buttons-container">
+        <div class="buttons-container__direction-buttons">
+          <button class="buttons-container__button button button--left" (click)="showPrevious()">⟨</button>
+          <button class="buttons-container__button button button--right" (click)="showNext()">⟩</button>
+        </div>
+        <button class="button button--surprise" (click)="showRandom()">Surprise me</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,149 @@
+@import '../../../../public/styles/_mixins.scss';
+@import '../../../../public/styles/_media.scss';
+
+.section {
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+}
+
+.card {
+  padding: 25px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  row-gap: 15px;
+
+  &__image-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: lightblue;
+      top: 47%;
+      left: 59%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    &::after {
+      content: "“";
+      font-size: 72px;
+      color: white;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      background-color: lightblue;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+    }
+  }
+
+  &__image {
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+
+
+  &__personal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+
+  &__direction-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+  }
+}
+
+.button {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+
+  &--left,
+  &--right {
+    font-size: 24px;
+    color: lightblue;
+    background-color: transparent;
+    font-weight: 800;
+
+    @include hover {
+      color: #254caf;
+    }
+  }
+
+  &--surprise {
+    background-color: lightblue;
+    color: #254caf;
+    border: #254caf solid 1px;
+
+    @include hover {
+      background-color: #254caf;
+      color: white;
+      border: lightblue solid 1px;
+    }
+  }
+}
+
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__name {
+    padding-top: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  &__job {
+    padding-top: 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: lightblue;
+  }
+
+  &__description {
+    padding-top: 15px;
+  }
+}
