@@ -1,0 +1,33 @@
+@import '../../../../../public/styles/_mixins.scss';
+@import '../../../../../public/styles/_media.scss';
+
+.cross-button {
+  @include reset-button;
+  @include square(48px);
+
+  position: relative;
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 70%;
+    height: 2px;
+    background-color: var(--color-dark);
+  }
+
+  &::before {
+    rotate: 45deg;
+  }
+
+  &::after {
+    rotate: -45deg;
+  }
+}

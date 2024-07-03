@@ -1,0 +1,73 @@
+
+
+@import 'styles/burger-button',
+'styles/cross-button',
+'styles/mobile-overlay'
+;
+
+@import '../../../../public/styles/_mixins.scss';
+@import '../../../../public/styles/_media.scss';
+
+
+.header {
+  padding-top: 60px;
+
+  @include desktop {
+    padding-top: 30px;
+  }
+
+  @include mobile {
+    padding-top: 15px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+
+    @include tablet {
+      column-gap: 30px;
+    }
+  }
+
+  &__logo {
+
+  }
+
+  &__menu {
+    margin-left: auto;
+    font-size: 20px;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+    }
+
+    &-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      height: 48px;
+
+      @include hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition-duration: inherit;
+      }
+    }
+  }
+}
