@@ -1,0 +1,74 @@
+@import '../../../../public/styles/_mixins.scss';
+@import '../../../../public/styles/_media.scss';
+
+@import 'styles/_button.scss',
+'styles/_cross-button.scss',
+'styles/_burger-button.scss',
+'styles/_header.scss',
+'styles/nav-main';
+
+
+h1 {
+  padding-top: 80px;
+}
+
+.content {
+  margin-left: 100px;
+  padding: 16px;
+}
+
+.nav {
+  $color-primary: #ff7eee;
+  $color-secondary: #df49a6;
+
+  margin-top: 60px;
+  width: 80px;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--color-dark);
+  transition: width 200ms ease;
+
+
+  &__list {
+    margin-top: 40px;
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    row-gap: 50px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 32px;
+    column-gap: 10px;
+
+    @include hover {
+      filter: grayscale(0) opacity(1);
+
+      .nav__icon {
+        fill: $color-primary;
+      }
+
+      .nav__text {
+        color: $color-secondary;
+      }
+    }
+
+  }
+
+  &__text {
+    display: none;
+  }
+}
+
+.nav__icon {
+  fill: #F3F3F3;
+  width: 40px;
+}
+
+

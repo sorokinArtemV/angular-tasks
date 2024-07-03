@@ -1,0 +1,12 @@
+
+
+.burger-button {
+  &::after {
+    @include abs-center;
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-light);
+    box-shadow: 0 -8px var(--color-light), 0 8px var(--color-light);
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../../../../public/styles/_mixins.scss';
+@import '../../../../../public/styles/_media.scss';
+
+.header {
+  padding-block: var(--section-padding-y);
+  position: fixed;
+  width: 100vw;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  .logo {
+    &__image {
+      transition-duration: inherit;
+      filter: grayscale(1);
+
+      @include hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  &__nav-main {
+    margin-left: auto;
+  }
+}

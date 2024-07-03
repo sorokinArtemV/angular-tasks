@@ -1,0 +1,10 @@
+.button {
+  @include reset-button;
+  @include square(48px);
+  position: relative;
+  cursor: pointer;
+
+  @include hover {
+    background-color: #e72c83;
+  }
+}
