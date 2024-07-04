@@ -1,0 +1,46 @@
+.container__inner {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.faq {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.faq__question {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: var(--color-gray-alt) 1px solid;
+}
+.faq__title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.faq__icon {
+  width: 30px;
+  margin-left: auto;
+  transition: transform 0.3s ease; /* Add this line for icon rotation */
+}
+.faq__icon--active {
+  transform: rotate(180deg); /* Rotate the icon when active */
+}
+.faq__answer {
+  padding-block: 10px;
+  border-bottom: var(--color-dark) 3px solid;
+  animation: open 0.5s ease-in-out forwards;
+}
+
+.heading {
+  display: flex;
+}
+
+/*# sourceMappingURL=task7.component.css.map */

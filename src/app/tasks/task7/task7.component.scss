@@ -1,0 +1,58 @@
+@import '../../../../public/styles/_mixins.scss';
+@import '../../../../public/styles/_media.scss';
+
+
+.container {
+  &__inner {
+    margin-top: 60px;
+
+    @include flex-center();
+
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.faq {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__question {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: var(--color-gray-alt) 1px solid;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__icon {
+    width: 30px;
+    margin-left: auto;
+    transition: transform 0.3s ease; /* Add this line for icon rotation */
+
+    &--active {
+      transform: rotate(180deg); /* Rotate the icon when active */
+    }
+  }
+
+  &__answer {
+    padding-block: 10px;
+    border-bottom: var(--color-dark) 3px solid;
+    animation: open 0.5s ease-in-out forwards;
+  }
+}
+
+.heading {
+  display: flex;
+  //justify-content: space-between;
+  //align-items: center;
+}
+
