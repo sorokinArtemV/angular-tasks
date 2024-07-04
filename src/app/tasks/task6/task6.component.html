@@ -1,0 +1,23 @@
+<app-header/>
+<button class="button-show-modal button"
+        type="button"
+        (click)="toggleModal()"
+>
+  Show Modal
+</button>
+@if (isOpened()) {
+  <div class="modal ">
+    <button class="button-close-modal button"
+            type="button"
+            (click)="toggleModal()"
+    >
+      &times;
+    </button>
+    <div class="modal__title ">Modal Window</div>
+    <div class="modal__text">
+      <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, excepturi inventore nisi quod repudiandae similique sit! Consequuntur deleniti error harum in, incidunt maxime molestiae nisi nobis odit porro quaerat totam?</span><span>Aliquam assumenda doloribus eveniet fugiat laborum nostrum numquam officiis voluptates? Dolores eum impedit iusto nam nisi odio recusandae tempore. Delectus ea laudantium numquam odit optio provident recusandae sit unde voluptatem?</span>
+      </p>
+    </div>
+  </div>
+  <div class="overlay" (click)="toggleModal()"></div>
+}

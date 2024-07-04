@@ -1,0 +1,84 @@
+.button-show-modal {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  height: 64px;
+  font-size: 30px;
+  padding-inline: 35px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+@media (hover: hover) {
+  .button-show-modal:hover {
+    background-color: lightblue;
+    color: var(--color-light);
+  }
+}
+@media (hover: none) {
+  .button-show-modal:active {
+    background-color: lightblue;
+    color: var(--color-light);
+  }
+}
+
+.button-close-modal {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  font-size: 40px;
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (hover: hover) {
+  .button-close-modal:hover {
+    background-color: lightblue;
+  }
+}
+@media (hover: none) {
+  .button-close-modal:active {
+    background-color: lightblue;
+  }
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 20px 60px 60px 60px;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+.modal__title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+/*# sourceMappingURL=task6.component.css.map */
