@@ -1,0 +1,126 @@
+@import "../../../../public/styles/_mixins.scss";
+@import "../../../../public/styles/_media.scss";
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20px 40px;
+
+    &-list {
+      color: var(--color-light);
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 40px;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .switch-button {
+    display: inline-block;
+    padding: 7px 10px;
+    font-size: 16px;
+    background-color: #077dc7;
+    color: var(--color-gray);
+    border: 2px solid #ff8d19;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 93%;
+    left: 2%;
+
+    @include hover {
+      background-color: #2980b9;
+    }
+
+    &.stop {
+      background-color: #ff8d19;
+
+      &::before {
+        content: "\25A0"; // Stop icon (square)
+      }
+    }
+
+    &::before {
+      content: "\25B6";
+    }
+
+  }
+}
+
+.content {
+  color: var(--color-light);
+  font-family: 'Cinzel', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 25px;
+  z-index: 2;
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1em;
+    letter-spacing: 0.02rem;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.608);
+  }
+}
+
+.action-links {
+  display: flex;
+  font-size: 24px;
+  justify-content: space-between;
+  gap: 30px;
+
+  &__link {
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to bottom, rgba(71, 172, 238, 0.7), rgba(10, 77, 98, 0.24));
+    //background: linear-gradient(180deg, #aa2409, #761500 100%);
+    text-transform: uppercase;
+    color: var(--color-light);
+    border: 2px solid #ff8d19;
+    border-image: linear-gradient(#ff8d19, #fd944b) 1;
+    display: inline-flex;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 35px;
+
+    @include hover {
+      opacity: 0.7;
+    }
+
+    &--transparent {
+      background: transparent;
+    }
+  }
+
+  &:last-child {
+    margin-top: 40px;
+  }
+}

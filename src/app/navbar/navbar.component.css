@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+}
+.nav__list {
+  font-weight: 500;
+  margin-left: auto;
+  display: flex;
+  font-size: 20px;
+}
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  position: relative;
+}
+@media (hover: hover) {
+  .nav__link:hover::after {
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .nav__link:active::after {
+    width: 100%;
+  }
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition-duration: inherit;
+}
+
+/*# sourceMappingURL=navbar.component.css.map */
