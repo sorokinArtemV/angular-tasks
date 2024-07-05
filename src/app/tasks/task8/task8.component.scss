@@ -1,0 +1,74 @@
+@import '../../../../public/styles/_mixins.scss';
+@import '../../../../public/styles/_media.scss';
+
+@import 'styles/button',
+'styles/card';
+
+
+.section {
+  &__header {
+    padding-block: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 36px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 50%;
+      height: 4px;
+      background-color: $color-accent;
+      margin-top: 10px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.menu {
+  margin-top: 40px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    font-size: 18px;
+  }
+}
+
+.dishes {
+  margin-top: 20px;
+  
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 60px;
+
+    @include desk {
+      grid-template-columns: 1fr
+    }
+  }
+}
+
+
+//li{
+//  display: inline-block;
+//}

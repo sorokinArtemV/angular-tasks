@@ -1,0 +1,121 @@
+.button {
+  padding-inline: 24px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: var(--border-radius-small);
+}
+@media (hover: hover) {
+  .button:hover {
+    background-color: #be9700;
+    color: var(--color-light);
+  }
+}
+@media (hover: none) {
+  .button:active {
+    background-color: #be9700;
+    color: var(--color-light);
+  }
+}
+.button--gold {
+  background-color: transparent;
+  color: #be9700;
+  border: #be9700 1.5px solid;
+}
+
+.dishes-card {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 15px;
+  width: 650px;
+}
+.dishes-card__image {
+  border: #be9700 6px solid;
+  border-radius: var(--border-radius-small);
+}
+.dishes-card__title {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 2px;
+  align-items: flex-start;
+  position: relative;
+}
+.dishes-card__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: lightgrey;
+  margin-top: 10px;
+}
+.dishes-card__text {
+  padding-block: 20px;
+  line-height: 1.4;
+}
+.dishes-card__price {
+  color: #be9700;
+  font-weight: 400;
+}
+
+.section__header {
+  padding-block: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.section__title {
+  font-size: 36px;
+  text-transform: uppercase;
+  position: relative;
+}
+.section__title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 50%;
+  height: 4px;
+  background-color: #be9700;
+  margin-top: 10px;
+}
+.section__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  margin-top: 40px;
+}
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 18px;
+}
+
+.dishes {
+  margin-top: 20px;
+}
+.dishes__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 60px;
+}
+@media (max-width: 1400px) {
+  .dishes__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=task8.component.css.map */

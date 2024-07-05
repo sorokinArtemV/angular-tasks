@@ -1,0 +1,20 @@
+$color-accent: #be9700;
+
+.button {
+  padding-inline: 24px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: var(--border-radius-small);
+
+  @include hover {
+    background-color: $color-accent;
+    color: var(--color-light);
+  }
+
+  &--gold {
+    background-color: transparent;
+    color: $color-accent;
+    border: $color-accent 1.5px solid;
+  }
+
+}

@@ -1,0 +1,54 @@
+<app-header/>
+
+<main class="content">
+  <section class="section">
+    <header class="section__header">
+      <h1 class="section__title">Our Menu</h1>
+      <div class="menu">
+        <ul class="menu__list">
+          @if (menuList().length > 0) {
+            <li class="menu__item">
+              <button class="menu__button button button--gold" type="button" (click)="resetFilter()">
+                All
+              </button>
+            </li>
+          }
+          @for (dish of menuCategories; track $index) {
+            <li class="menu__item">
+              <button class="menu__button button button--gold" type="button" (click)="filterByCategory(dish)">
+                {{ dish }}
+              </button>
+            </li>
+          }
+        </ul>
+      </div>
+    </header>
+
+    <div class="section__body">
+      <div class="dishes">
+        <ul class="dishes__list">
+          @for (dish of menuList(); track $index) {
+            <li class="dishes__item">
+              <article class="dishes-card">
+                <img class="dishes-card__image"
+                     [src]="dish.img"
+                     alt=""
+                     width="219" height="150" loading="lazy"
+                >
+                <div class="dishes-card__body">
+                  <h3 class="dishes-card__title">
+                    <span class="dishes-card__label">{{ dish.title }}</span>
+                    <span class="dishes-card__price">{{ dish.price | currency }}</span>
+                  </h3>
+                  <p class="dishes-card__text">{{ dish.desc }} </p>
+                </div>
+              </article>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+
