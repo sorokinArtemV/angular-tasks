@@ -1,13 +1,15 @@
 <div class="hero">
   <video
-    class="hero__video"
-    type="video/webm"
+    class="hero__video hidden-mobile"
     src="./images/task9-images/wotlk.webm"
-    controls
-    muted
     autoplay
+    muted
     loop
+    #vid
   >
+    <source
+      src="./images/task9-images/wotlk.webm"
+    >
   </video>
   <nav class="hero__nav">
     <ul class="hero__nav-list">
@@ -24,11 +26,15 @@
     >
     <h1 class="content__title">The Lich King Has Returned</h1>
     <div class="content__action-links action-links">
-      <a class="action-links__link" href="/">Subscribe</a>
+      <a class="action-links__link action-links__link--solid" href="/">Subscribe</a>
       <a class="action-links__link action-links__link--transparent" href="/">Shop upgrades</a>
     </div>
   </div>
-  <button class="hero__switch-button switch-button hidden-mobile"></button>
+  <button class="hero__switch-button switch-button hidden-mobile"
+          type="button"
+          (click)="togglePlay()"
+          [class]="{ 'switch-button--stop': !isPlaying, 'switch-button--play': isPlaying }"
+  ></button>
 </div>
 
 

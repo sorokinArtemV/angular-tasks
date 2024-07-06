@@ -1,6 +1,18 @@
 @import "../../../../public/styles/_mixins.scss";
 @import "../../../../public/styles/_media.scss";
 
+@import "styles/_switch-button.scss";
+
+$headerOpacity: 0.7;
+$mobile-mini: 550px;
+
+@mixin mobile-mini {
+  @media (max-width: $mobile-mini) {
+    @content;
+  }
+}
+
+
 .hero {
   width: 100%;
   height: 100vh;
@@ -8,6 +20,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @include mobile {
+    background-image: url(../../../../public/images/task9-images/keyart_mobile.jpeg);
+    background-size: cover;
+    background-position: bottom;
+  }
 
   &__nav {
     position: absolute;
@@ -38,37 +56,6 @@
     object-fit: cover;
     z-index: -1;
   }
-
-  .switch-button {
-    display: inline-block;
-    padding: 7px 10px;
-    font-size: 16px;
-    background-color: #077dc7;
-    color: var(--color-gray);
-    border: 2px solid #ff8d19;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    top: 93%;
-    left: 2%;
-
-    @include hover {
-      background-color: #2980b9;
-    }
-
-    &.stop {
-      background-color: #ff8d19;
-
-      &::before {
-        content: "\25A0"; // Stop icon (square)
-      }
-    }
-
-    &::before {
-      content: "\25B6";
-    }
-
-  }
 }
 
 .content {
@@ -78,6 +65,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   row-gap: 25px;
   z-index: 2;
 
@@ -87,6 +75,10 @@
     line-height: 1em;
     letter-spacing: 0.02rem;
     text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.608);
+
+    @include mobile-mini {
+      font-size: 30px;
+    }
   }
 }
 
@@ -96,10 +88,13 @@
   justify-content: space-between;
   gap: 30px;
 
+  @include mobile-mini {
+    flex-direction: column;
+  }
+
   &__link {
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(to bottom, rgba(71, 172, 238, 0.7), rgba(10, 77, 98, 0.24));
     //background: linear-gradient(180deg, #aa2409, #761500 100%);
     text-transform: uppercase;
     color: var(--color-light);
@@ -111,12 +106,22 @@
     align-items: center;
     padding-inline: 35px;
 
-    @include hover {
-      opacity: 0.7;
+
+    &--solid {
+      background: linear-gradient(to bottom, rgba(71, 172, 238, 0.7), rgba(10, 77, 98, 0.24));
+
+      @include hover {
+        opacity: $headerOpacity;
+      }
     }
 
     &--transparent {
       background: transparent;
+
+      @include hover {
+        background: linear-gradient(rgba(255, 141, 25, 0.7), #652b07);
+        opacity: $headerOpacity;
+      }
     }
   }
 
@@ -124,3 +129,5 @@
     margin-top: 40px;
   }
 }
+
+

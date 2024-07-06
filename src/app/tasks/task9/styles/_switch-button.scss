@@ -1,0 +1,33 @@
+.switch-button {
+  display: inline-block;
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 16px;
+  background-color: #077dc7;
+  color: var(--color-gray);
+  border: 2px solid #ff8d19;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 93%;
+  left: 2%;
+
+  @include hover {
+    opacity: 0.7;
+  }
+
+  &--stop {
+
+    &::before {
+      content: "\2759\2759";
+    }
+  }
+
+  &--play {
+    background-color: #2980b9;
+
+    &::before {
+      content: "\25B6";
+    }
+  }
+}
