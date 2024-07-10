@@ -1,0 +1,49 @@
+.section__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 48px;
+}
+.menu__title {
+  padding-inline: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: 2px white solid;
+  border-radius: var(--border-radius-small);
+}
+
+.button {
+  padding-inline: 36px;
+  height: 48px;
+  border-radius: var(--border-radius-small);
+  border: var(--border);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+@media (hover: hover) {
+  .button:hover {
+    background-color: lightgrey;
+    color: var(--color-dark);
+  }
+}
+@media (hover: none) {
+  .button:active {
+    background-color: lightgrey;
+    color: var(--color-dark);
+  }
+}
+.button--transparent {
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=task1.component.css.map */

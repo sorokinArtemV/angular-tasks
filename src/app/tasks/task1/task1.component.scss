@@ -1,0 +1,49 @@
+@import '../../../../public/styles/_mixins.scss';
+@import '../../../../public/styles/_media.scss';
+
+
+.section {
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 48px;
+
+  &__title {
+    padding-inline: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border: 2px white solid;
+    border-radius: var(--border-radius-small);
+  }
+}
+
+.button {
+  padding-inline: 36px;
+  height: 48px;
+  border-radius: var(--border-radius-small);
+  border: var(--border);
+  cursor: pointer;
+  text-transform: uppercase;
+
+  @include hover {
+    background-color: lightgrey;
+    color: var(--color-dark);
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+}
