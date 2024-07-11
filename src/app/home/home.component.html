@@ -2,18 +2,11 @@
 <main class="content">
   <div class="tasks-bar grid">
     <ul class="tasks-bar__list">
-      <li class="tasks__item">
-        <a [routerLink]="['/tasks', '1']" class="tasks__link">Task #1: Color Flipper</a>
-      </li>
-      <li class="tasks__item">
-        <a [routerLink]="['/tasks', '2']" class="tasks__link">Task #2: Counter</a>
-      </li>
-      <li class="tasks__item">
-        <a [routerLink]="['/tasks', '3']" class="tasks__link">Task #3: Review carousel</a>
-      </li>
-      <li class="tasks__item">
-        <a [routerLink]="['/tasks', '4']" class="tasks__link">Task #4: Responsive navbar</a>
-      </li>
+      @for (task of tasks(); track task.id) {
+        <li class="tasks__item">
+          <a [routerLink]="['/tasks', task.id]" class="tasks__link">{{ task.title }}</a>
+        </li>
+      }
     </ul>
     <router-outlet class="tasks-bar__content"></router-outlet>
   </div>

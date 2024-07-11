@@ -11,6 +11,6 @@ export const routes: Routes = [
   {
     path: 'tasks/1',
     component: Task1Component,
-    title: 'Tasks App',
+    title: 'Color Flipper',
   },
 ];
