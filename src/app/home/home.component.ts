@@ -18,18 +18,11 @@ import { DisplayElementsService } from '../shared/services/display-elements.serv
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   private displayService = inject(DisplayElementsService);
   private router = inject(Router);
   private destroyRef = inject(DestroyRef);
   tasks = signal(TASKS_DATA);
-
-
-  // constructor(private router: Router) {
-  //   this.router.events.subscribe((event) => {
-  //     if (event instanceof NavigationEnd) this.displayService.updateIsHomePageIsOpened(event.url);
-  //   });
-  // }
 
   ngOnInit(): void {
     const subscription = this.router.events.subscribe((event) => {
