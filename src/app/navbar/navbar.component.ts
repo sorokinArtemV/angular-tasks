@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { DisplayElementsService } from '../shared/services/display-elements.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { DisplayElementsService } from '../shared/services/display-elements.serv
   imports: [],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent {
   displayService = inject(DisplayElementsService);

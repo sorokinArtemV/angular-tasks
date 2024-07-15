@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, Renderer2, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, Renderer2, signal } from '@angular/core';
 import { HeaderComponent } from '../../header/header.component';
 import { generateRandomColor } from './helpers/color-randomizer';
 import { HEX_SYMBOLS } from './constants/hex-values';
@@ -11,7 +11,8 @@ import { INITIAL_COLOR, STORAGE_COLOR_VAR } from './constants/colors';
     HeaderComponent
   ],
   templateUrl: './task1.component.html',
-  styleUrl: './task1.component.scss'
+  styleUrl: './task1.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Task1Component implements OnInit {
   private readonly renderer = inject(Renderer2);

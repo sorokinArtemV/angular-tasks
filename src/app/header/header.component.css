@@ -1,23 +1,24 @@
-.header {
+:host {
   padding-block: var(--section-padding-y);
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.22);
 }
-.header__inner {
+:host .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .logo__image {
+
+.logo__image {
   transition-duration: inherit;
   filter: grayscale(1);
 }
 @media (hover: hover) {
-  .header .logo__image:hover {
+  .logo__image:hover {
     filter: grayscale(0);
   }
 }
 @media (hover: none) {
-  .header .logo__image:active {
+  .logo__image:active {
     filter: grayscale(0);
   }
 }
