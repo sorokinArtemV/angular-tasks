@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["tasks.component.scss","../../../public/styles/_mixins.scss"],"names":[],"mappings":"AAIE;ECmBE;EAGF;EACA;EDrBE","file":"tasks.component.css"}
+{"version":3,"sourceRoot":"","sources":["tasks.component.scss","../../assets/styles/_mixins.scss"],"names":[],"mappings":"AAIE;ECmBE;EAGF;EACA;EDrBE","file":"tasks.component.css"}
