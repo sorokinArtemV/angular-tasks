@@ -6,11 +6,17 @@ export const routes: Routes = [
   {
     path: '',
     component: TasksComponent,
-    title: 'Tasks App',
+    title: 'Hello, Angular!',
   },
   {
-    path: 'tasks/1',
-    component: Task1Component,
-    title: 'Color Flipper',
+    path: 'tasks',
+    title: 'Tasks',
+    children: [
+      {
+        path: 'color-flipper',
+        component: Task1Component,
+        title: 'Color Flipper',
+      }
+    ]
   },
 ];
