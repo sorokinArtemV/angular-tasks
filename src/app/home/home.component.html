@@ -1,0 +1,15 @@
+<app-header class="header"/>
+<main class="content">
+  <div class="tasks-bar grid">
+    <ul class="tasks-bar__list">
+      @for (task of tasks(); track task.id) {
+        <li class="tasks__item">
+          <a [routerLink]="['/tasks', task.path]" class="tasks__link">{{ task.title }}</a>
+        </li>
+      }
+    </ul>
+    <router-outlet class="tasks-bar__content"></router-outlet>
+  </div>
+</main>
+
+

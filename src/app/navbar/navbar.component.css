@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+}
+.nav__list {
+  font-weight: 500;
+  margin-left: auto;
+  display: flex;
+  font-size: 40px;
+}
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  position: relative;
+}
+@media (hover: hover) {
+  .nav__link:hover {
+    color: #e72c83;
+  }
+}
+@media (hover: none) {
+  .nav__link:active {
+    color: #e72c83;
+  }
+}
+
+/*# sourceMappingURL=navbar.component.css.map */

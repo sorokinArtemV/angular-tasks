@@ -1,38 +1,11 @@
-@import '../../../public/styles/_mixins.scss';
-@import '../../../public/styles/_media.scss';
+@import '../../assets/styles/_mixins.scss';
+@import '../../assets/styles/_media.scss';
 
-.tasks {
-  padding-top: 70px;
-
-  @include flex-center();
-
-  flex-direction: column;
-  font-size: 24px;
-
-  &__link {
-    display: inline-flex;
-    align-items: center;
-    height: 48px;
-    position: relative;
-    margin-bottom: 16px;
-
-    @include hover {
-      &::after {
-        width: 100%;
-      }
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      translate: -50%;
-      width: 0;
-      height: 2px;
-      background-color: currentColor;
-      transition-duration: inherit;
-    }
+.section {
+  &__title {
+    @include flex-center();
+    height: 30vh;
   }
 }
+
 

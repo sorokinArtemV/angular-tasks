@@ -1,10 +1,12 @@
-<app-header/>
-
 <section class="section container">
   <div class="section__inner">
     <div class="menu">
-      <div class="menu__title">Background color: {{ currentColor }}</div>
-      <button class="menu__button button button--transparent" (click)="changeColor()">Click me</button>
+      <div class="menu__title">Background color: {{ currentColor() }}</div>
+      <button class="menu__button button button--transparent" (click)="changeBodyColor()">Change
+        color
+      </button>
+      <button class="menu__button button button--transparent" (click)="cleanLocalStorage()">Reset color</button>
     </div>
   </div>
 </section>
+

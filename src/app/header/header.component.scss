@@ -1,25 +1,26 @@
-@import '../../../public/styles/_mixins.scss';
-@import '../../../public/styles/_media.scss';
+@import '../../assets/styles/_mixins.scss';
+@import '../../assets/styles/_media.scss';
 
-.header {
+:host {
   padding-block: var(--section-padding-y);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.22);
 
-  &__inner {
+
+  & .header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
 
-  .logo {
-    &__image {
-      transition-duration: inherit;
-      filter: grayscale(1);
-
-      @include hover {
-        filter: grayscale(0);
-      }
-    }
   }
 }
 
+.logo {
+  &__image {
+    transition-duration: inherit;
+    filter: grayscale(1);
+
+    @include hover {
+      filter: grayscale(0);
+    }
+  }
+}
