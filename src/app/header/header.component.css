@@ -1,0 +1,26 @@
+:host {
+  padding-block: var(--section-padding-y);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+}
+:host .header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__image {
+  transition-duration: inherit;
+  filter: grayscale(1);
+}
+@media (hover: hover) {
+  .logo__image:hover {
+    filter: grayscale(0);
+  }
+}
+@media (hover: none) {
+  .logo__image:active {
+    filter: grayscale(0);
+  }
+}
+
+/*# sourceMappingURL=header.component.css.map */

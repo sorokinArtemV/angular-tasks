@@ -1,0 +1,28 @@
+.header {
+  position: fixed;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 20px;
+}
+
+.tasks-bar__list {
+  margin-top: 75px;
+  padding: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  min-height: 100vh;
+  position: fixed;
+  border-radius: 2px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+}
+.tasks-bar__content {
+  margin-left: 290px;
+}
+
+/*# sourceMappingURL=home.component.css.map */
